@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class artikYil {
+    public static void main(String[] args) {
+        int year;
+        boolean artikyil = false;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Yıl giriniz: ");
+        year = inp.nextInt();
+
+        if(year % 4 == 0){
+            if(year % 100 == 0){
+                if(year % 400 == 0){
+                    artikyil = true;
+                }else {
+                    artikyil = false;
+                }
+            }else{
+                artikyil = true;
+            }
+
+        }else{
+            artikyil = false;
+        }
+        if(artikyil){
+            System.out.println(year + " yılı artık bir yıl");
+        }
+        else {
+            System.out.println(year + " yılı artık bir yıl değil");
+        }
+    }
+}
